@@ -1,0 +1,16 @@
+sudo: false
+language: ruby
+cache: bundler
+rvm:
+- 2.2.2
+- 2.3.1
+
+gemfile:
+  - Gemfile
+
+# notifications:
+#   email:
+#   - git@danmcclain.net
+# addons:
+#   code_climate:
+#     repo_token:
