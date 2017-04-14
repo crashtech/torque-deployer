@@ -6,8 +6,8 @@ module Torque
       def deployer_routes
         scope(Torque::Deployer.config.route, controller: 'torque/deployer') do
           get '/:action'
-          get :command
-          put :command
+          get :settings
+          put :settings
           post :deploy
           root action: :index
         end

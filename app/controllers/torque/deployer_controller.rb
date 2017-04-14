@@ -1,10 +1,12 @@
-class Torque::DeployerController < Torque::Deployer.config.base_controller
-  layout 'torque_deployer'
+module Torque
+  class DeployerController < Torque::Deployer.config.base_controller
+    layout 'torque_deployer'
 
-  def index
+    def index
+    end
+
+    def deploy
+    end
+
   end
-
-  def deploy
-  end
-
 end

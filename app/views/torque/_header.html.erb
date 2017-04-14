@@ -1,0 +1,23 @@
+<div class="navbar navbar-black" id="header">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">
+        <%= Rails.application.class.parent_name %>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to content_tag('i', '', class: 'glyphicon glyphicon-home'), root_path, title: 'Home' %></li>
+        <li><%= link_to content_tag('i', '', class: 'glyphicon glyphicon-cog'), settings_path, title: 'Settings' %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Back to Application', Rails.application.config.relative_url_root || '/' %></li>
+      </ul>
+    </div>
+  </div>
+</div>
