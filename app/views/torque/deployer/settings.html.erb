@@ -1,0 +1,25 @@
+<h2>Settings</h2>
+<div class="well bs-component">
+  <%= form_tag settings_path, method: :put, html: { class: 'form-horizontal' } do %>
+    <fieldset>
+      <legend>Command</legend>
+      <p>Here you fill out what's going to be executed when you hit the deploy button.</p>
+      <p>
+        This is a bash command-line script and you have access to <i>%{BRANCH}</i> which gives
+        you the name of the branch that will be dployed. You can access <i>%{TAG}</i> to chech either
+        if it's tag that is being deployed
+      </p>
+      <label id="command">
+        <p>#!/bin/bash</p>
+        <%= text_area_tag(:command, @command) %>
+      </label>
+      <div class="actions">
+        <%= submit_tag('Save', class: 'btn btn-success pull-right') %>
+        <%= link_to 'Cancel', root_path, class: 'btn btn-info pull-right' %>
+      </div>
+    </fieldset>
+  <%- end %>
+</div>
+<script>
+autosize(document.querySelector('textarea'))
+</script>

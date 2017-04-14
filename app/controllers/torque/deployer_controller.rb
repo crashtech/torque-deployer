@@ -5,7 +5,12 @@ module Torque
     def index
     end
 
-    def deploy
+    def settings
+      if request.get?
+        @command = 'git push -f origin %{BRANCH}:staging'
+      else
+        redirect_to root_path, notice: 'Settings saved successfully!'
+      end
     end
 
   end
