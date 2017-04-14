@@ -1,2 +1,3 @@
 require 'torque/deployer/version'
-require 'torque/deployer/json'
+require 'torque/deployer/payload'
+require 'torque/deployer/branch'
